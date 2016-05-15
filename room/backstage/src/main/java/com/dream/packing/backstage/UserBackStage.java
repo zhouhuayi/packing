@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.dream.packing.common.util.MD5Util;
 import com.dream.packing.server.UserServer;
 
 @Controller

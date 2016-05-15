@@ -9,6 +9,8 @@ public class User {
 	private String userName;
 
 	private String passWord;
+	
+	private String headImages;
 
 	private Integer personId;
 
@@ -40,6 +42,14 @@ public class User {
 
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
+	}
+
+	public String getHeadImages() {
+		return headImages;
+	}
+
+	public void setHeadImages(String headImages) {
+		this.headImages = headImages;
 	}
 
 	public Integer getPersonId() {

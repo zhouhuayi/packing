@@ -49,6 +49,13 @@ public class CommonDao<T> {
 		return commonMapper.findManyData(sql);
 	}
 
+	/**
+	 * 查找数量
+	 * 
+	 * @author zhy
+	 * @param sql 查询的sql 语句
+	 * @return
+	 */
 	public long findCount(String sql) {
 		return commonMapper.findCount(sql);
 	}
@@ -111,8 +118,23 @@ public class CommonDao<T> {
 		Params params = new Params();
 		params.setTables(getTableName(entityName));
 		params.setInsertMap(addData);
-		System.out.println(params.getAddhSql());
 		commonMapper.addEntity(params);
 		return params.getId();
+	}
+	
+	/**
+	 * 批量添加数据
+	 * 
+	 * @author zhy
+	 * @param entityName 实体Class
+	 * @param listMap	批量数据集合
+	 * @return
+	 */
+	public int batchAdd(Class<T> entityName, List<Map<String, Object>> listMap) {
+		Params params = new Params();
+		params.setTables(getTableName(entityName));
+		params.setInsertMap(listMap.get(0));
+		params.setBacthInsertMap(listMap);
+		return commonMapper.batchAdd(params);
 	}
 }

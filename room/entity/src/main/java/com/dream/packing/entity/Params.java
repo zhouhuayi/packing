@@ -32,6 +32,9 @@ public class Params {
 	/**添加参数*/
 	private Map<String, Object> insertMap;
 	
+	/**批量添加参数*/
+	private List<Map<String, Object>> bacthInsertMap;
+	
 	/**接受返回的主键ID*/
 	private Long id;
 
@@ -206,5 +209,12 @@ public class Params {
 	public void setInsertMap(Map<String, Object> insertMap) {
 		this.insertMap = insertMap;
 	}
-	
+
+	public List<Map<String, Object>> getBacthInsertMap() {
+		return bacthInsertMap;
+	}
+
+	public void setBacthInsertMap(List<Map<String, Object>> bacthInsertMap) {
+		this.bacthInsertMap = bacthInsertMap;
+	}
 }

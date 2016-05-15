@@ -9,14 +9,17 @@ import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * 类名称：实体与Map转换类 描述：实现Map与实体之间的相互转换 创建人：周化益 创建时间：2016-01-04
  */
-public class BeanConvertMapUtil {
+public class ConvertUtil {
 	/**
 	 * 将一个 JavaBean 对象转化为一个 Map
 	 * 
@@ -227,5 +230,34 @@ public class BeanConvertMapUtil {
 			e.printStackTrace();
 		}
 		return date;
+	}
+	
+	/**
+	 * String转List<T>
+	 * 
+	 * @author 周化益
+	 * @param type
+	 *            List的类型
+	 * @param str
+	 *            传入的字符串
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> List<T> strToList(Class<T> type, String str) {
+		List<T> list = null;
+		try {
+			if (str.trim().length() > 1) {
+				Object[] strArray = str.split(",");
+				List<Object> strList = new ArrayList<Object>();
+				strList = Arrays.asList(strArray);
+				list = new ArrayList<T>();
+				for (Object obj : strList) {
+					list.add((T) obj);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 }
