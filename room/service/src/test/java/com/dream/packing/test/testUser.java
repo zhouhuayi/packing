@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.dream.packing.common.util.BeanConvertMapUtil;
+import com.dream.packing.common.abnormal.RollBackException;
+import com.dream.packing.common.util.ConvertUtil;
 import com.dream.packing.entity.Person;
 import com.dream.packing.entity.User;
 import com.dream.packing.server.UserServer;
@@ -22,20 +23,22 @@ public class testUser {
 	
 	@Test
 	public void test() {		
-//		Map<String, Map<String, Object>> dataMap = new HashMap<String, Map<String,Object>>();
-//		User user = new User();
-//		user.setPassWord("weilaishi123");
-//		user.setUserName("启梦之路");
-//		
-//		Person person = new Person();
-//		person.setPhone("13003221671");
-//		person.setEmail("weilai_zhilu@sina.com");
-//		
-//		dataMap.put("user", BeanConvertMapUtil.convertBean(user));
-//		dataMap.put("person", BeanConvertMapUtil.convertBean(person));
-//		
-//		System.out.println(userServer.addUser(dataMap));
-		System.out.println(userServer.loginForWord("13003221671", "weilaishi123"));
+		Map<String, Map<String, Object>> dataMap = new HashMap<String, Map<String,Object>>();
+		User user = new User();
+		user.setPassWord("weilaishi123");
+		user.setUserName("启梦之路007");
+		user.setId(1);
+		
+		Person person = new Person();
+		person.setPhone("13003221674");
+		person.setEmail("weilai_zhilu4@sina.com");
+		
+		dataMap.put("user", ConvertUtil.convertBean(user));
+		dataMap.put("person", ConvertUtil.convertBean(person));
+		
+		System.out.println(userServer.addUser(dataMap));
+		
+//		System.out.println(userServer.loginForWord("13003221671", "weilaishi123"));
 		//登陆
 		/*System.out.println(accountService.login("admin", "123"));
 		

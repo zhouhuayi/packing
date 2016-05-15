@@ -16,4 +16,6 @@ public interface CommonMapper {
 	public int addEntity(Params params);
 	
 	public long findCount(String sql);
+	
+	public int batchAdd(Params params);
 }
