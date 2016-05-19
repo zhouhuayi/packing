@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body{
+margin: 0px;padding: 0px;
+}
+div#container{width:100%;}
+div#header{height:76.38px;}
+div#menu {float:left;width:16%}
+div#content {width:84%; float:left;margin-left: 0;margin-right:0}
+div#footer {height:57px;}
+iframe{width:100%;height:100%}
+h1 {margin-bottom:0;}
+h2 {margin-bottom:0; font-size:14px;}
+ul {margin:0;}
+li {list-style:none;}
+.footerClass {
+	text-align: center;
+	width: 100%;
+	line-height: 57px;
+}
+</style>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- font CSS -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!--webfonts-->
+<link href='css/webfonts.css' rel='stylesheet' type='text/css'>
+<!--//webfonts--> 
+<link href="css/custom.css" rel="stylesheet">
+</head> 
+</head>
+
+<body onload="getBodyHeight()">
+
+<div id="container">
+	<div id="header">
+		<div class="main-content">
+			<!-- header-starts -->
+			<div class="sticky-header header-section ">
+				<div class="header-left">
+					<!--toggle button start-->
+					<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+					<!--toggle button end-->
+					<!--logo -->
+					<div class="logo">
+						<a href="index.html">
+							<h1>QIMENG</h1>
+							<span>AdminPanel</span>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="header-right">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<div class="notification_header">
+											<h3>You have 3 new messages</h3>
+										</div>
+									</li>
+									<li><a href="#">
+									   <div class="user_img"><img src="images/1.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet</p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									</a></li>
+									<li class="odd"><a href="#">
+										<div class="user_img"><img src="images/2.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									  <div class="clearfix"></div>	
+									</a></li>
+									<li><a href="#">
+									   <div class="user_img"><img src="images/3.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									</a></li>
+									<li>
+										<div class="notification_bottom">
+											<a href="#">See all messages</a>
+										</div> 
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown head-dpdn">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<div class="notification_header">
+											<h3>You have 3 new notification</h3>
+										</div>
+									</li>
+									<li><a href="#">
+										<div class="user_img"><img src="images/2.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet</p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									  <div class="clearfix"></div>	
+									 </a></li>
+									 <li class="odd"><a href="#">
+										<div class="user_img"><img src="images/1.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									 </a></li>
+									 <li><a href="#">
+										<div class="user_img"><img src="images/3.png" alt=""></div>
+									   <div class="notification_desc">
+										<p>Lorem ipsum dolor amet </p>
+										<p><span>1 hour ago</span></p>
+										</div>
+									   <div class="clearfix"></div>	
+									 </a></li>
+									 <li>
+										<div class="notification_bottom">
+											<a href="#">See all notifications</a>
+										</div> 
+									</li>
+								</ul>
+							</li>	
+							<li class="dropdown head-dpdn">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">15</span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<div class="notification_header">
+											<h3>You have 8 pending task</h3>
+										</div>
+									</li>
+									<li><a href="#">
+										<div class="task-info">
+											<span class="task-desc">Database update</span><span class="percentage">40%</span>
+											<div class="clearfix"></div>	
+										</div>
+										<div class="progress progress-striped active">
+											<div class="bar yellow" style="width:40%;"></div>
+										</div>
+									</a></li>
+									<li><a href="#">
+										<div class="task-info">
+											<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+										   <div class="clearfix"></div>	
+										</div>
+										<div class="progress progress-striped active">
+											 <div class="bar green" style="width:90%;"></div>
+										</div>
+									</a></li>
+									<li><a href="#">
+										<div class="task-info">
+											<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+											<div class="clearfix"></div>	
+										</div>
+									   <div class="progress progress-striped active">
+											 <div class="bar red" style="width: 33%;"></div>
+										</div>
+									</a></li>
+									<li><a href="#">
+										<div class="task-info">
+											<span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+										   <div class="clearfix"></div>	
+										</div>
+										<div class="progress progress-striped active">
+											 <div class="bar  blue" style="width: 80%;"></div>
+										</div>
+									</a></li>
+									<li>
+										<div class="notification_bottom">
+											<a href="#">See all pending tasks</a>
+										</div> 
+									</li>
+								</ul>
+							</li>	
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+					<!--notification menu end -->
+					<div class="profile_details">		
+						<ul>
+							<li class="dropdown profile_details_drop">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<div class="profile_img">	
+										<span class="prfil-img"><img src="images/a.png" alt=""> </span> 
+										<div class="user-name">
+											<p id="userName"></p>
+											<span>Administrator</span>
+										</div>
+										<i class="fa fa-angle-down lnr"></i>
+										<i class="fa fa-angle-up lnr"></i>
+										<div class="clearfix"></div>	
+									</div>	
+								</a>
+								<ul class="dropdown-menu drp-mnu">
+									<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
+									<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+									<li> <a href="login.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>				
+				</div>
+				<div class="clearfix"> </div>	
+			</div>
+			<!-- //header-ends -->
+		</div>
+	</div>
+
+	<div id="menu">
+		<!--left-fixed -navigation-->
+			<div class=" sidebar" role="navigation">
+	            <div class="navbar-collapse">
+					<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+						<ul class="nav" id="side-menu">
+							<li><a href="#"><i class="fa fa-home nav_icon"></i>运营状况</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!--left-fixed -navigation-->
+		<!-- Classie -->
+		<script src="js/classie.js"></script>
+	</div>
+
+	<div id="content">
+		<iframe id="main" src="index.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	</div>
+
+	<div id="footer">
+		<div class="footer-section"></div>
+		<div class="footerClass">Copyright © 2016.起梦 All rights reserved.</div>
+		
+	</div>
+
+</div>
+ <!-- js-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"> </script>
+<script type="text/javascript">
+var LoginInfoData;
+var parentPower = [];
+var childPower = {};
+var childPowerList = [];
+var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+showLeftPush = parent.document.getElementById('showLeftPush'),
+body = document.body;
+
+showLeftPush.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( body, 'cbp-spmenu-push-toright' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeftPush' );
+};
+
+$.ajax({   
+        type: "POST",   
+        url: "userBackStage/getLoginSession.do",  
+        dataType: "json",
+        async: false,
+        success: function(data) {
+       	LoginInfoData = data;
+       	$("#userName").html(LoginInfoData.userName);
+       	
+       	var leftPower = LoginInfoData.powerList;
+		var leftContent = "";
+		
+		$.each(leftPower, function(n,value) {
+			if(value.parentPowerId) {
+				if(childPower[value.parentPowerId]) {
+					childPowerList = childPower[value.parentPowerId];
+				} else {
+					childPowerList = [];
+				}
+				childPowerList.push(value);
+				childPower[value.parentPowerId] = childPowerList;
+			} else {
+				parentPower.push(value);
+			}
+		});
+		
+		$.each(parentPower, function(n,value) {
+			leftContent += '<li>';
+			
+			if(childPower[value.id]) {
+				leftContent += '<a href="#"><i class="fa fa-cogs nav_icon"></i>'+value.powerName+' <span class="nav-badge">12</span> <span class="fa arrow"></span></a>';
+				leftContent += '<ul class="nav nav-second-level collapse">';
+				$.each(childPower[value.id], function(m,childValue) {
+					leftContent += '<li><a href="javaScript:menuClick(\''+childValue.redirectUrl+'\');">'+childValue.powerName+'</a></li>';
+				});
+				leftContent += '</ul>'
+			} else {
+				leftContent += '<a href="javaScript:menuClick(\''+value.redirectUrl+');"><i class="fa fa-home nav_icon"></i>'+value.powerName+'</a>';
+			}
+			leftContent += '</li>';
+		});
+		$("#side-menu").append(leftContent);
+    }
+});
+	
+function disableOther( button ) {
+	if( button !== 'showLeftPush' ) {
+		classie.toggle( showLeftPush, 'disabled' );
+	}
+}
+	
+function getBodyHeight() {
+	var leftHieght = window.innerHeight-76.38-57 + "px";
+	$(".cbp-spmenu-vertical").css("height", leftHieght);
+	$("#menu").css("height", leftHieght);
+	$("#content").css("height", leftHieght);
+}
+
+function menuClick(url) {
+	document.getElementById("main").contentWindow.location.href=url;
+}
+</script>
+<!-- Metis Menu -->
+<script src="js/metisMenu.min.js"></script>
+<script src="js/custom.js"></script>
+<!--//Metis Menu -->
+</body>
+</html>

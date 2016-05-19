@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+margin: 0px;padding: 0px;
+}
+div#container{width:100%;}
+div#header{height:76.38px;}
+div#menu {float:left;width:16%}
+div#content {width:83%; float:left;margin-left: 0.2%;margin-right:0.2%}
+div#footer {height:57px;}
+iframe{width:100%;height:100%}
+h1 {margin-bottom:0;}
+h2 {margin-bottom:0; font-size:14px;}
+ul {margin:0;}
+li {list-style:none;}
+</style>
+</head>
+
+<body onload="getBodyHeight()">
+
+<div id="container">
+
+<div id="header">
+	<iframe id="top" src="head.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+<div id="menu">
+	<iframe id="left" src="left.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+<div id="content">
+	<iframe id="center" src="index.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+<div id="footer">
+	<iframe id="botton" class="footer" src="botton.html" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+</div>
+<script type="text/javascript">
+	function getBodyHeight() {
+		document.getElementById("menu").style.height = window.innerHeight-76.38-62 + "px";
+		document.getElementById("content").style.height= window.innerHeight-76.38-62 + "px";
+	}
+</script>
+</body>
+</html>
